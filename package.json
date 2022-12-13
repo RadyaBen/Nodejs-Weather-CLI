@@ -1,0 +1,32 @@
+{
+  "name": "weather-cli-nodejs",
+  "version": "1.0.0",
+  "description": "Check the weather for your city via the command line",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "cli-app",
+    "weather"
+  ],
+  "author": {
+    "name": "Rodion Lizohubenko",
+    "email": "lizoguben.radya@gmail.com"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/RadyaBen/Nodejs-Weather-CLI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RadyaBen/Nodejs-Weather-CLI.git"
+  },
+  "dependencies": {
+    "axios": "^1.2.1"
+  }
+}
