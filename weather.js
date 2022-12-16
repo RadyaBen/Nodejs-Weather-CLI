@@ -18,6 +18,20 @@ const saveToken = async (token) => {
 	}
 };
 
+const saveCity = async (city) => {
+	if (!city.length) {
+		printError('The city hasn\'t been transferred');
+		return;
+	}
+
+	try {
+		await saveKeyValue(TOKEN_DICTIONARY.city, city);
+		printSuccess('The city has been saved');
+	} catch (e) {
+		printError(e.message);
+	}
+};
+
 const getForcast = async () => {
 	try {
 		const weather = await getWeather(process.env.CITY);
@@ -38,6 +52,10 @@ const initCLI = () => {
 
 	if (args.h) {
 		printHelp();
+	}
+
+	if (args.c) {
+		saveCity(args.c);
 	}
 
 	if (args.t) {
