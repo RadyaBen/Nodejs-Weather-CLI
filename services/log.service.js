@@ -15,9 +15,9 @@ const printHelp = () => {
 	console.log(
 		dedent`${chalk.bgCyan(' HELP ')}
 		Without parameters - weather output
-		-c [CITY] to set the city
-		-h to get help
-		-t [API_KEY] to save the token
+		-c [CITY_NAME]  Set the city name
+		-h              Print this help text
+		-t [API_KEY]    Save the API token
 		`
 	);
 };
