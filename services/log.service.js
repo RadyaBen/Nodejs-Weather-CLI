@@ -25,19 +25,22 @@ const printHelp = () => {
 const printWeather = (res, icon) => {
 	const cityName = chalk.blue(res.name),
 		weatherDesc = res.weather[0].description,
-		mainTemp = chalk.bold.yellowBright(res.main.temp + 'C'),
-		feelsLike = chalk.bold.yellowBright(res.main.feels_like + 'C'),
-		maxTemp = chalk.bold.yellowBright(res.main.temp_max + 'C'),
-		convertedMaxTemp = chalk.bold.blueBright(convertCelsiusToFahrenheit(res.main.temp_max) + 'F'),
-		minTemp = chalk.bold.yellowBright(res.main.temp_min + 'C'),
-		convertedMinTemp = chalk.bold.blueBright(convertCelsiusToFahrenheit(res.main.temp_min) + 'F'),
+		mainTemp = chalk.bold.yellowBright(res.main.temp + '°' + 'C'),
+		convertedMainTemp = chalk.bold.blueBright(convertCelsiusToFahrenheit(res.main.temp) + '°' + 'F'),
+		feelsLike = chalk.bold.yellowBright(res.main.feels_like + '°' + 'C'),
+		convertedFeelsLike = chalk.bold.blueBright(convertCelsiusToFahrenheit(res.main.feels_like) + '°' + 'F'),
+		maxTemp = chalk.bold.yellowBright(res.main.temp_max + '°' + 'C'),
+		convertedMaxTemp = chalk.bold.blueBright(convertCelsiusToFahrenheit(res.main.temp_max) + '°' + 'F'),
+		minTemp = chalk.bold.yellowBright(res.main.temp_min + '°' + 'C'),
+		convertedMinTemp = chalk.bold.blueBright(convertCelsiusToFahrenheit(res.main.temp_min) + '°' + 'F'),
 		humidityPercent = res.main.humidity;
 
 	console.log(
 		dedent`${chalk.bgMagenta(' WEATHER ')}
 		🌎 Weather in ${cityName}
 		${icon}  Description: ${weatherDesc}
-		${icon}  Temperature: ${mainTemp} / Feels like ${feelsLike}
+		${icon}  Temperature: ${mainTemp} / ${convertedMainTemp}
+		${icon}  Feels like ${feelsLike} / ${convertedFeelsLike}
 		📈 Maximum temperature: ${maxTemp} / ${convertedMaxTemp}
 		📉 Minimum temperature: ${minTemp} / ${convertedMinTemp}
 		🌊 Humidity: ${humidityPercent}%
