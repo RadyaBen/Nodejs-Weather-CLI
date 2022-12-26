@@ -7,7 +7,6 @@
 <div align='center'>
 
    ![npm](https://img.shields.io/npm/v/cli-weather-forecast?style=flat-square)
-   ![node-current](https://img.shields.io/node/v/cli-weather-forecast?style=flat-square)
 
 </div>
 
