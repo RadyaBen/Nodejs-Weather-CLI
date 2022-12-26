@@ -1,5 +1,5 @@
 {
-  "name": "weather-cli-nodejs",
+  "name": "cli-weather-forecast",
   "version": "1.0.0",
   "description": "Check the weather for your city via the command line",
   "main": "weather.js",
